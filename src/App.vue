@@ -1,7 +1,7 @@
 <template>
   <div class = "container">
     <Header title = "Plant Inventory"/>
-    <Plants :plants="plants"/>
+    <Plants @delete-plant="deletePlant" :plants="plants"/>
   </div>
 </template>
 
@@ -19,27 +19,35 @@ export default {
       plants:[]
     }
   },
+  methods: {
+    deletePlant(id){
+      if (confirm('Are you sure about deleting this plant?')) {
+        this.plants = this.plants.filter((plant) => 
+        plant.id !== id)
+      } 
+    },
+  },
   created() {
       this.plants = [
       {
         id: 1,
         text:'Plant Tenzin',
-        description:'Tenzin Nyima',
+        description:'Place holder of plant 1',
         reminder: true,
       },
 
       {
         id: 2,
         text:'Plant Leen',
-        description:'Leen Diab',
+        description:'Place holder of plant 2',
         reminder: true,
       },
 
       {
         id: 3,
         text: 'Plant Cameron',
-        description:'Cameron Mitchell',
-        reminder: false,
+        description:'Place holder of plant 3',
+        reminder: false ,
       }
 
     ]

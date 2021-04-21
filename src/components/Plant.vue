@@ -1,6 +1,9 @@
 <template>
-    <div class = "plant">
-        <h3>{{ plant.text }}</h3>
+    <div @dblclick="$emit('toggle-reminder',plant.id)" :class = 
+    "[plant.reminder ? 'reminder' : '', 'plant']">
+        <h3>{{ plant.text }}
+            <i @click="$emit('delete-plant',plant.id)" class="fas fa-times"></i>
+        </h3>
         <p>{{ plant.description }}</p>
     </div>
     
@@ -11,7 +14,7 @@ export default{
     name : 'Plant',
     props:{
         plant:Object
-    }
+    },
 }
 </script>
 <style>

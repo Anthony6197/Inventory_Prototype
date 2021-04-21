@@ -1,6 +1,7 @@
 <template>
     <div :key = "plant.id" v-for = "plant in plants">
-        <Plant: plant = "plant"/>
+        <Plant @delete-plant="$emit('delete-plant',plant.id)" 
+        :plant = "plant"/>
     </div>
 </template>
 
@@ -8,11 +9,12 @@
 import Plant from "./Plant"
 export default{
     name: 'Plants',
-    props:{
+    props: {
         plants: Array
     },
-    components:{
+    components: {
         Plant
-    }
+    },
+    emits: ['delete-plant'],
 }
 </script>
