@@ -2,6 +2,7 @@
   <div class = "container">
     <Header title = "Plant Inventory"/>
     <Plants @delete-plant="deletePlant" :plants="plants"/>
+    <PlantRenderer/>
   </div>
 </template>
 
