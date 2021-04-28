@@ -1,11 +1,15 @@
+<template>
+  <canvas width="200" height="200" />
+</template>
+
 <script>
 import { h } from "vue";
 export default{
     props: {
         plant: { }
     },
-    setup({ plant }){
-        return () => h('canvas',{});
+    mounted() {
+      console.log("Here is our DOM element:", this.$el, this.plant);
     }
 };
 </script>
