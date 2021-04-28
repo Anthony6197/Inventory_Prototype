@@ -1,7 +1,7 @@
 <template>
   <div class = "container">
     <Header title = "Plant Inventory"/>
-    <Plantrender2 :plant="'Fake plant data'" />
+    <PlantRenderer :plant="'Fake plant data'" />
     <Plants @delete-plant="deletePlant" :plants="plants"/>
     <!-- <PlantRenderer/> -->
   </div>
@@ -10,13 +10,14 @@
 <script>
 import Header from './components/Header'
 import Plants from './components/Plants'
-import Plantrender2 from './components/PlantRenderer'
+import PlantRenderer from './components/PlantRenderer'
+
 export default {
   name: 'App',
   components: {
     Header,
     Plants,
-    Plantrender2
+    PlantRenderer
   },
   data(){
     return{

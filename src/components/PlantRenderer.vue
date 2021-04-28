@@ -1,18 +1,30 @@
 <template>
-  <canvas width="200" height="200" />
+  <div class="plantContainer" />
 </template>
 
 <script>
-import { h } from "vue";
+import p5 from 'p5';
 export default{
     props: {
         plant: { }
     },
     mounted() {
-      console.log("Here is our DOM element:", this.$el, this.plant);
+      new p5(
+          (graphics) => {
+            graphics.setup = () => {
+              graphics.createCanvas(150, 150);
+              console.log("Here are our plant parameters:", this.plant);
+              // Replace this with call to plant rendering code
+              // Something like drawPlant(this.plant, graphics)
+              graphics.circle(60, 30, 50);
+            }
+          },
+          this.$el
+      );
     }
 };
 </script>
+
 <style scoped>
-</style>>
+</style>
 
