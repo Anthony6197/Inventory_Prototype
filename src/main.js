@@ -11,10 +11,4 @@ app.component('PlantRenderer', {
   }
 });
 
-// app.component('PlantImages',{
-//   render() {
-
-//   }
-// });
-
 app.mount('#app');
