@@ -35,7 +35,18 @@ export default {
         text:'Plant Tenzin',
         description:'Place holder of plant 1',
         reminder: true,
-        radius: 20,  // Replace this with real plant parameters
+        radius: 20, // Replace this with real plant parameters
+        initialSize : 80,
+        strokeSizeSensitivity : 1.2,
+        leftBranchSize : .51,
+        leftBranchAngle : Math.PI/7,
+        rightBranchSize : .42,
+        rightBranchAngle : Math.PI/9,
+        midBranchSize : .8,
+        flowerProb : 0.06,
+        // flower : sunflower,
+        berryProb: 0,
+        berry : null
       },
 
       {
@@ -44,6 +55,17 @@ export default {
         description:'Place holder of plant 2',
         reminder: true,
         radius: 50,  // Replace this with real plant parameters
+        initialSize : 250,
+        strokeSizeSensitivity : 1.5,
+        leftBranchSize : .42,
+        leftBranchAngle : Math.PI/4,
+        rightBranchSize : .65,
+        rightBranchAngle : Math.PI/7,
+        midBranchSize : .6,
+        flowerProb : 0.2,
+        // flower : corpseFlower,
+        berryProb : 0.2,
+        // berry : raspberry
       },
 
       {
