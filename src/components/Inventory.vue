@@ -15,7 +15,7 @@
 import PlantRenderer from "./PlantRenderer"
 
 export default{
-    name: 'Plants',
+    name: 'Inventory',
     props: {
         plants: Array
     },
