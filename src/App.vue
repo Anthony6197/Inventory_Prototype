@@ -1,23 +1,19 @@
 <template>
   <div class = "container">
     <Header title = "Plant Inventory"/>
-    <PlantRenderer :plant="'Fake plant data'" />
-    <Plants @delete-plant="deletePlant" :plants="plants"/>
-    <!-- <PlantRenderer/> -->
+    <Inventory @delete-plant="deletePlant" :plants="plants"/>
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
-import Plants from './components/Plants'
-import PlantRenderer from './components/PlantRenderer'
+import Inventory from './components/Inventory'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Plants,
-    PlantRenderer
+    Inventory,
   },
   data(){
     return{
@@ -33,13 +29,13 @@ export default {
     },
   },
   created() {
-      this.plants = [
+    this.plants = [
       {
         id: 1,
         text:'Plant Tenzin',
         description:'Place holder of plant 1',
         reminder: true,
-        canvas:null
+        radius: 20,  // Replace this with real plant parameters
       },
 
       {
@@ -47,17 +43,16 @@ export default {
         text:'Plant Leen',
         description:'Place holder of plant 2',
         reminder: true,
-        canvas:null
+        radius: 50,  // Replace this with real plant parameters
       },
 
       {
         id: 3,
         text: 'Plant Cameron',
         description:'Place holder of plant 3',
-        reminder: false ,
-        canvas:null
+        reminder: false,
+        radius: 120,  // Replace this with real plant parameters
       }
-
     ]
   }
 }

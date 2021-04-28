@@ -16,7 +16,7 @@ export default{
               console.log("Here are our plant parameters:", this.plant);
               // Replace this with call to plant rendering code
               // Something like drawPlant(this.plant, graphics)
-              graphics.circle(60, 30, 50);
+              graphics.circle(60, 30, this.plant.radius);
             }
           },
           this.$el
