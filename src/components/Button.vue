@@ -1,5 +1,5 @@
 <template>
-  <button: @click = "onClick()" :style = " {
+  <button: @click = "Breed()" :style = " {
   background: color} " class="btn"> {{ text }}
   </button:>
 </template>
@@ -12,8 +12,8 @@ export default {
       color:String
   },
   methods:{
-      onClick(){
-          console.log('click')
+      Breed(){
+          console.log("Breed");
       },
   }
 }

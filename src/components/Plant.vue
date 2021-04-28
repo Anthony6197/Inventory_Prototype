@@ -5,6 +5,7 @@
             <i @click="$emit('delete-plant',plant.id)" class="fas fa-times"></i>
         </h3>
         <p>{{ plant.description }}</p>
+        <canvas ref="plant-image" width='300' height="300"></canvas>
     </div>
     
 </template>

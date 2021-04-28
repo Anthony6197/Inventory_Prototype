@@ -2,18 +2,21 @@
   <div class = "container">
     <Header title = "Plant Inventory"/>
     <Plants @delete-plant="deletePlant" :plants="plants"/>
-    <PlantRenderer/>
+    <!-- <PlantRenderer/> -->
+    <Plantrender2 :level="3" />
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
 import Plants from './components/Plants'
+import Plantrender2 from './components/Plantrender2'
 export default {
   name: 'App',
   components: {
     Header,
-    Plants
+    Plants,
+    Plantrender2
   },
   data(){
     return{
@@ -35,6 +38,7 @@ export default {
         text:'Plant Tenzin',
         description:'Place holder of plant 1',
         reminder: true,
+        canvas:null
       },
 
       {
@@ -42,6 +46,7 @@ export default {
         text:'Plant Leen',
         description:'Place holder of plant 2',
         reminder: true,
+        canvas:null
       },
 
       {
@@ -49,6 +54,7 @@ export default {
         text: 'Plant Cameron',
         description:'Place holder of plant 3',
         reminder: false ,
+        canvas:null
       }
 
     ]
